@@ -16,7 +16,7 @@ header {
 .titleWww {
     position: absolute;
     top: 3vh;
-    left: -15vw;
+    /*left: -15vw;*/
     font-family: 'Baloo 2';
     font-style: normal;
     font-weight: 700;

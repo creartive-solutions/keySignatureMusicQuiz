@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background: #FFDBA5;
+}
+
+/*HEADER*/
+header {
+    position: relative;
+    height: 12vh;
+    border-bottom: 2px solid black;
+}
+.titleWww {
+    position: absolute;
+    top: 3vh;
+    left: -15vw;
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.logo {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 1vh;
+    right: 3vw;
+}
+
+
+/* STATS*/
+.stats {
+    margin: 2vh;
+    display: flex;
+    justify-content: space-around;
+}
+.goodDiv {
+    background: #18CD15;
+    border: 2px solid #000000;
+    width: 30vw;
+    height:8vh;
+    position: relative;
+
+
+}
+
+.badDiv {
+    background: red;
+    border: 2px solid #000000;
+    width: 30vw;
+    height:8vh;
+    position: relative;
+}
+
+.statsNumb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.ans {
+    display: block;
+    margin:  auto;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+    font-family: 'Baloo 2';
+
+}
+
+/*ZADANIE*/
+
+.startStop {
+    display: flex;
+
+}
+
+button.start {
+    display: block;
+    margin: auto;
+    margin-top: -15px;
+    width: 30vw;
+    height: 5vh;
+    border-radius: 30px;
+    border: 3px solid black;
+    background: rgba(222, 179, 27, 0.6);
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+button.end {
+    display: block;
+    margin: auto;
+    margin-top: -15px;
+    width: 30vw;
+    height: 5vh;
+    border-radius: 30px;
+    border: 3px solid black;
+    background: rgba(222, 179, 27, 0.6);
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.score {
+    border: 5px solid black;
+    border-radius: 20px;
+    height: 25vh;
+    width: 70%;
+    margin: 2vh auto;
+    position: relative;
+}
+
+.keyExc {
+    height: 23vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.ansTon {
+    margin-top: -10px;
+}
+
+.form {
+    display: inline-block;
+    margin: auto;
+}
+
+.answers {
+    display: flex;
+    flex: 20vw ;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+.btnAns {
+    width: 22vw;
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    margin: 0.5vh 0;
+
+}
+
+
+.copy {
+    position: absolute;
+    bottom: 1vh;
+    left: 50%;
+    translate: -50%
+}
+
+button.check {
+    display: block;
+    margin: 10px auto;
+
+    width: 38vw;
+    height: 5vh;
+    border-radius: 30px;
+    border: 3px solid black;
+    background: rgba(222, 179, 27, 0.6);
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+button:focus {
+    background-color: cadetblue;
+    box-shadow: 0 0 0 3px blue
+    color: red;
+}

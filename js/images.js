@@ -1,65 +1,91 @@
 const imageZeroKey = {
     name: 'zeroKey',
-    src: '/picture/noneKey.png',
+    srcGrand: '/picture/noneKeyGrand.png',
+    srcTreble: '/picture/noneKeyTreble.png',
+    srcBass: '/picture/noneKeyBass.png',
     key: 'C-a',
 }
 const imageOneflat = {
-    name: 'zeroKey',
-    src: '/picture/key1flat.png',
+    name: 'oneKey',
+    srcGrand: '/picture/key1flat.png',
     key: 'F-d',
 }
 
 const imageOneSharp = {
-    name: 'zeroKey',
-    src: '/picture/key1sharp.png',
+    name: 'oneKey',
+    srcGrand: '/picture/key1sharp.png',
     key: 'G-e',
 }
 
 const imageTwoFlat = {
-    name: 'zeroKey',
-    src: '/picture/key2flat.png',
+    name: 'twoKey',
+    srcGrand: '/picture/key2flat.png',
     key: 'B-g',
 }
 
 const imageTwoSharp = {
-    name: 'zeroKey',
-    src: '/picture/key2sharp.png',
+    name: 'twoKey',
+    srcGrand: '/picture/key2sharp.png',
     key: 'D-h',
 }
 
 const imageThreeFlat = {
-    name: 'zeroKey',
-    src: '/picture/key3flat.png',
+    name: 'threeKey',
+    srcGrand: '/picture/key3flat.png',
     key: 'Es-c',
 }
 
 const imageThreeSharp = {
-    name: 'zeroKey',
-    src: '/picture/key3sharp.png',
+    name: 'threeKey',
+    srcGrand: '/picture/key3sharp.png',
     key: 'A-fis',
 }
 
 const imageFourFlat = {
-    name: 'zeroKey',
-    src: '/picture/key4flat.png',
+    name: 'fourKey',
+    srcGrand: '/picture/key4flat.png',
     key: 'As-f',
 }
 
 const imageFourSharp = {
-    name: 'zeroKey',
-    src: '/picture/key4sharp.png',
+    name: 'fourKey',
+    srcGrand: '/picture/key4sharp.png',
     key: 'E-cis',
 }
 
 const imageFiveFlat = {
-    name: 'zeroKey',
-    src: '/picture/key5flat.png',
+    name: 'fiveKey',
+    srcGrand: '/picture/key5flat.png',
     key: 'Des-b',
 }
 
 const imageFiveSharp = {
-    name: 'zeroKey',
-    src: '/picture/key5sharp.png',
+    name: 'fiveKey',
+    srcGrand: '/picture/key5sharp.png',
+    key: 'H-gis',
+}
+
+const imageSixSharp = {
+    name: 'sixKey',
+    srcGrand: '/picture/key5sharp.png',
+    key: 'H-gis',
+}
+
+const imageSixFlat = {
+    name: 'sixKey',
+    srcGrand: '/picture/key5sharp.png',
+    key: 'H-gis',
+}
+
+const imageSevenSharp = {
+    name: 'sevenKey',
+    srcGrand: '/picture/key5sharp.png',
+    key: 'H-gis',
+}
+
+const imageSevenFlat = {
+    name: 'sevenKey',
+    srcGrand: '/picture/key5sharp.png',
     key: 'H-gis',
 }
 

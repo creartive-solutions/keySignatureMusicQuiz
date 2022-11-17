@@ -103,9 +103,17 @@ numOfKeysDisabler()
 function exerciseStart() {
     btnStart.disabled=true;
     const imageNow = randomImage(gallery)
-    score.setAttribute('src', imageNow.src);
     score.setAttribute('key', imageNow.key);
 
+switch (xxx === xxx) {
+    case "treble":
+        score.setAttribute('src', imageNow.srcTreble);
+    case "bass":
+        score.setAttribute('src', imageNow.srcBass);
+    case "grand":
+        score.setAttribute('src', imageNow.srcGrand);
+
+}
 }
 
 btnStart.addEventListener('click', exerciseStart);

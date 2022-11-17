@@ -29,20 +29,29 @@ function numOfKeys() {
 
 
 //Filtrowanie kluczy
+clefSelector.value = localStorage.getItem('clefSet')
 
-const modifyClef = clefSelector.value;
+clefSelector.onchange = function () {
+
+    let modifyClef = clefSelector.value;
+    localStorage.setItem('clefSet', modifyClef)
+    return modifyClef
+
+}
 // clefSelector.value = localStorage.getItem('clefSet')
 
 
 
-// const submitSettings = function() {
-//     document.querySelector('.setSignatures').submit();
-//     document.querySelector('.setClefs').submit();
-//
-// }
+const submitSettings = function() {
+    document.querySelector('.setSignatures').submit();
+    document.querySelector('.setClefs').submit();
+    numOfKeysDisabler()
+    end()
+
+}
 
 
-numberOfKeys.addEventListener('change', numOfKeysDisabler)
+// numberOfKeys.addEventListener('change', numOfKeysDisabler)
 function numOfKeysDisabler() {
 
     switch (numOfKeys()) {
@@ -129,7 +138,7 @@ function exerciseStart() {
     btnStart.disabled=true;
     const imageNow = randomImage(gallery)
     score.setAttribute('key', imageNow.key);
-        switch (modifyClef) {
+        switch (clefSelector.value) {
             case "treble":
                 score.setAttribute('src', imageNow.srcTreble);
                 break
@@ -214,6 +223,7 @@ const end = function() {
     badAnswerCounter.innerText = `${badAnswer}`;
     localStorage.clear('badStats');
     localStorage.clear('goodStats');
+    exerciseStart()
 
 }
 

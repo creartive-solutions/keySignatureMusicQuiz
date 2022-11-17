@@ -7,22 +7,26 @@ html {
     background: #FFDBA5;
 }
 
+.wrapper {
+    margin: auto;
+    align-content: center;
+    max-width: 1100px;
+    overflow: hidden;
+
+}
+
 /*HEADER*/
 header {
-    position: relative;
-    height: 12vh;
+
     border-bottom: 2px solid black;
 }
 .titleWww {
-    position: absolute;
-    top: 3vh;
-    left: 50%;
-    translate: -50%;
+   margin: 2vh auto;
+    width: 80vw;
     font-family: 'Baloo 2';
     font-style: normal;
     font-weight: 700;
-    font-size: 25px;
-    line-height: 25px;
+    font-size: 3vh;
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -33,10 +37,10 @@ header {
 
 .logo {
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 20vmin;
+    height: 20vmin;
     top: 1vh;
-    right: 3vw;
+    right: 1vw;
 }
 
 
@@ -50,6 +54,7 @@ header {
     background: #18CD15;
     border: 2px solid #000000;
     width: 30vw;
+    max-width: 400px;
     height:8vh;
     position: relative;
 
@@ -60,6 +65,7 @@ header {
     background: red;
     border: 2px solid #000000;
     width: 30vw;
+    max-width: 400px;
     height:8vh;
     position: relative;
 }
@@ -95,9 +101,10 @@ header {
 button.start {
     display: block;
     margin: auto;
-    margin-top: -15px;
-    width: 30vw;
-    height: 5vh;
+    /*margin-top: -15px;*/
+    width: 40vw;
+    max-width: 300px;
+    height: 6vh;
     border-radius: 30px;
     border: 3px solid black;
     background: rgba(222, 179, 27, 0.6);
@@ -113,9 +120,10 @@ button.start {
 button.end {
     display: block;
     margin: auto;
-    margin-top: -15px;
-    width: 30vw;
-    height: 5vh;
+    /*margin-top: -15px;*/
+    width: 40vw;
+    max-width: 300px;
+    height: 6vh;
     border-radius: 30px;
     border: 3px solid black;
     background: rgba(222, 179, 27, 0.6);
@@ -132,14 +140,17 @@ button.end {
 .score {
     border: 5px solid black;
     border-radius: 20px;
-    height: 25vh;
+    height: 30vh;
     width: 70%;
+    max-width: 400px;
     margin: 2vh auto;
     position: relative;
+    pointer-events: none;
+
 }
 
 .keyExc {
-    height: 23vh;
+    height: 28vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -158,11 +169,13 @@ button.end {
 /*wygląd buttona*/
 .answersForm label {
     display: inline-block;
-    padding: 20px 30px;
+    padding: 15px 20px;
+    width: 28vw;
+    max-width: 250px;
     background-color: #FEBE8C;
     border: 2px black solid;
-    border-radius: 40px;
-    margin: 10px;
+    border-radius: 25px;
+    margin: 5px auto;
     font-weight: 700;
     font-family: "Baloo 2";
     text-align: center;
@@ -179,7 +192,8 @@ button.end {
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 60vw;
+    width: 90vw;
+    max-width: 1100px;
     margin: auto;
 
 }

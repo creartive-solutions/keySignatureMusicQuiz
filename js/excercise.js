@@ -18,7 +18,13 @@ const clefSelector = document.querySelector('.clefSetter')
 
 
 //filtrowanie buttonów odpowiedzi (po ilości znaków)
-numberOfKeys.value = localStorage.getItem('keyNum')
+if(numberOfKeys.value === '' ) {
+    numberOfKeys.value === '7'
+    localStorage.setItem('keyNum', numberOfKeys.value)
+} else {
+    numberOfKeys.value = localStorage.getItem('keyNum')
+}
+
 
 function numOfKeys() {
    let keyNumber = document.querySelector('.keySetter').value
@@ -28,8 +34,13 @@ function numOfKeys() {
 
 
 
+
 //Filtrowanie kluczy
-clefSelector.value = localStorage.getItem('clefSet')
+if(clefSelector.value === '' ) {
+    clefSelector.value === 'grand'
+} else {
+    clefSelector.value = localStorage.getItem('clefSet')
+}
 
 clefSelector.onchange = function () {
 

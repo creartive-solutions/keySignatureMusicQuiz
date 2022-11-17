@@ -10,8 +10,7 @@
     <script src="https://kit.fontawesome.com/12382a2d8c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Noto+Music&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -40,19 +39,7 @@
         <img class="keyExc" src="" alt="">
     </div>
     <span class="ans ansTon">co to za tonacja?</span>
-    <form class="form" action="">
-        <label>Wybierz ilość znaków:</label>
-        <select name="keyNumber" id="keySignature" class="keySetter">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-        </select>
-    </form>
+
     <div  class="answersForm">
         <form id="keyCheckerAns">
             <input type="radio" name="keySing" id="C-a"  value="C-a"  data-signature="0"> <label for="C-a">C-dur <br> a-moll</label>
@@ -74,6 +61,32 @@
     <button class="check" form="keyCheckerAns" type="submit">SPRAWDŹ!</button>
     </div>
 </main>
+    <div class="settings">
+        <h2>ustawienia <i class="fa-solid fa-sliders"></i></h2>
+        <form class="setSignatures">
+            <label>Wybierz ilość znaków:</label>
+            <select name="keyNumber" id="keySignature" class="keySetter">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+        </form>
+        <form action="" class="setClefs">
+            <label>Wybierz klucz do rozpoznawania tonacji:</label>
+            <select name="clef" id="clef" class="clefSetter">
+                <option value="treble"><span class="clef">𝄞</span> - klucz wiolinowy</option>
+                <option value="bass"><span class="clef">𝄢</span> - klucz basowy</option>
+                <option value="grand"><span class="clef">𝄞+𝄢</span> - klucz wiolinowy + basowy</option>
+
+            </select>
+
+        </form>
+    </div>
 <footer>
     <section>
         <a href=""><i></i></a>

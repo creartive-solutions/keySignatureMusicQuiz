@@ -67,25 +67,25 @@ const imageFiveSharp = {
 
 const imageSixSharp = {
     name: 'sixKey',
-    srcGrand: '/picture/key5sharp.png',
+    srcGrand: '/picture/key6sharp.png',
     key: 'H-gis',
 }
 
 const imageSixFlat = {
     name: 'sixKey',
-    srcGrand: '/picture/key5sharp.png',
+    srcGrand: '/picture/key6flat.png',
     key: 'H-gis',
 }
 
 const imageSevenSharp = {
     name: 'sevenKey',
-    srcGrand: '/picture/key5sharp.png',
+    srcGrand: '/picture/key7sharp.png',
     key: 'H-gis',
 }
 
 const imageSevenFlat = {
     name: 'sevenKey',
-    srcGrand: '/picture/key5sharp.png',
+    srcGrand: '/picture/key7flat.png',
     key: 'H-gis',
 }
 

@@ -9,16 +9,19 @@ const btnAnswers = document.querySelectorAll("input[name]");
 const numberOfKeys = document.querySelector('.keySetter')
 
 
+//dodać do local storage zapisana ilosc znakow
+//dodac do local storage zapisana forme kluczy
+//zapisywać wyniki dobre i zle do local storage - po zakonczeniu zadania reset atrybutow
 
 
+numberOfKeys.addEventListener('change', numOfKeysDisabler)
 
 //filtrowanie buttonów odpowiedzi
+function numOfKeys() {
+    const num = document.querySelector('.keySetter').value
+    return num
+};
 function numOfKeysDisabler() {
-    function numOfKeys() {
-        const num = prompt('Wybierz ilość znaków przykluczowych (od 0 do 7)')
-        return num
-
-    };
 
     switch (numOfKeys()) {
         case '7':
@@ -105,7 +108,7 @@ function exerciseStart() {
     const imageNow = randomImage(gallery)
     score.setAttribute('key', imageNow.key);
 
-switch (xxx === xxx) {
+switch (document.querySelector('.clefSetter').value) {
     case "treble":
         score.setAttribute('src', imageNow.srcTreble);
     case "bass":
@@ -168,7 +171,7 @@ const checkAnswer = function(event) {
             badCounter();
             alert('Błędna odpowiedź');
         }
-    event.preventDefault()
+    // event.preventDefault()
     ansUnchecker()
     exerciseStart();
 };

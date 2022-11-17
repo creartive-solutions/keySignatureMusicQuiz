@@ -254,3 +254,11 @@ button:hover {
     box-shadow: 0 0 0 3px blue;
     color: darkblue;
 }
+
+.settings {
+    margin: 2vh auto;
+    padding: 2vh;
+    border: 2px black solid;
+    border-radius: 30px;
+max-width: 600px;
+}

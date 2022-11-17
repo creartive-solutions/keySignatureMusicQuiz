@@ -7,6 +7,7 @@ const scoreDiv = document.querySelector('.score');
 const score = document.querySelector('.keyExc');
 const btnAnswers = document.querySelectorAll("input[name]");
 const numberOfKeys = document.querySelector('.keySetter')
+const clefSelector = document.querySelector('.clefSetter')
 
 
 //dodać do local storage zapisana ilosc znakow
@@ -14,17 +15,38 @@ const numberOfKeys = document.querySelector('.keySetter')
 //zapisywać wyniki dobre i zle do local storage - po zakonczeniu zadania reset atrybutow
 
 
-numberOfKeys.addEventListener('change', numOfKeysDisabler)
 
-//filtrowanie buttonów odpowiedzi
+
+//filtrowanie buttonów odpowiedzi (po ilości znaków)
+numberOfKeys.value = localStorage.getItem('keyNum')
+
 function numOfKeys() {
-    const num = document.querySelector('.keySetter').value
-    return num
+   let keyNumber = document.querySelector('.keySetter').value
+    localStorage.setItem('keyNum', keyNumber)
+    return keyNumber
 };
+
+
+
+//Filtrowanie kluczy
+
+const modifyClef = clefSelector.value;
+// clefSelector.value = localStorage.getItem('clefSet')
+
+
+
+// const submitSettings = function() {
+//     document.querySelector('.setSignatures').submit();
+//     document.querySelector('.setClefs').submit();
+//
+// }
+
+
+numberOfKeys.addEventListener('change', numOfKeysDisabler)
 function numOfKeysDisabler() {
 
     switch (numOfKeys()) {
-        case '7':
+        // case '7':
         case '6':
             document.querySelector('input#Cis-ais').setAttribute('type', 'hidden')
             document.querySelector('input#Ces-as').setAttribute('type', 'hidden')
@@ -107,48 +129,50 @@ function exerciseStart() {
     btnStart.disabled=true;
     const imageNow = randomImage(gallery)
     score.setAttribute('key', imageNow.key);
+        switch (modifyClef) {
+            case "treble":
+                score.setAttribute('src', imageNow.srcTreble);
+                break
+            case "bass":
+                score.setAttribute('src', imageNow.srcBass);
+                break
+            case "grand":
+                score.setAttribute('src', imageNow.srcGrand);
+                break
+        }
 
-switch (document.querySelector('.clefSetter').value) {
-    case "treble":
-        score.setAttribute('src', imageNow.srcTreble);
-    case "bass":
-        score.setAttribute('src', imageNow.srcBass);
-    case "grand":
-        score.setAttribute('src', imageNow.srcGrand);
-
-}
 }
 
 btnStart.addEventListener('click', exerciseStart);
 
 //liczniki
-let goodAnswer = 0;
+
+let goodAnswer = localStorage.getItem('goodStats');
+if (goodAnswer === null) {
+    goodAnswer = 0;
+} else {
+    goodAnswerCounter.innerText = `${goodAnswer}`
+}
 function goodCounter() {
     goodAnswer++;
     goodAnswerCounter.innerText = `${goodAnswer}`
+    localStorage.setItem('goodStats', goodAnswer)
 }
 
-let badAnswer = 0;
+let badAnswer = localStorage.getItem('badStats');
+if (badAnswer === null) {
+    badAnswer = 0;
+} else {
+    badAnswerCounter.innerText = `${badAnswer}`
+}
 function badCounter() {
     badAnswer++;
     badAnswerCounter.innerText = `${badAnswer}`;
+    localStorage.setItem('badStats', badAnswer);
 }
 
 
-//???
-
-// document.addEventListener('change', function() {
-// if (setKeysNumber() === '0') {
-//     document.querySelectorAll('keyOne').disabled = true;
-// }
-// });
-
-
-
 //pokazuje ilość znaków
-
-
-
 
 let odp = "";
 btnAnswers.forEach((button)=> {
@@ -188,7 +212,11 @@ const end = function() {
     goodAnswerCounter.innerText = `${goodAnswer}`
     badAnswer = 0;
     badAnswerCounter.innerText = `${badAnswer}`;
+    localStorage.clear('badStats');
+    localStorage.clear('goodStats');
+
 }
+
 
 
 btnEnd.addEventListener('click', end)

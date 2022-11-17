@@ -46,7 +46,7 @@ const submitSettings = function() {
     document.querySelector('.setSignatures').submit();
     document.querySelector('.setClefs').submit();
     numOfKeysDisabler()
-    end()
+    // end()
 
 }
 
@@ -223,7 +223,7 @@ const end = function() {
     badAnswerCounter.innerText = `${badAnswer}`;
     localStorage.clear('badStats');
     localStorage.clear('goodStats');
-    exerciseStart()
+    // exerciseStart()
 
 }
 

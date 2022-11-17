@@ -204,7 +204,12 @@ button.end {
 input:disabled + label {
     background-color: rgba(0, 0, 0, 0.4);
 }
- 
+
+input[type=hidden] + label {
+    display: none;
+/*visibility: hidden;*/
+}
+
 
 .copy {
     display: block;

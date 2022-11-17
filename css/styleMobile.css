@@ -178,7 +178,7 @@ button.end {
 .answersForm form {
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 60vw;
     margin: auto;
 
@@ -201,12 +201,15 @@ button.end {
 
 }
 
+input:disabled + label {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+ 
 
 .copy {
-    position: absolute;
-    bottom: 1vh;
-    left: 50%;
-    translate: -50%
+    display: block;
+    text-align: center;
+    margin: auto;
 }
 
 button.check {
@@ -227,8 +230,8 @@ button.check {
     text-align: center;
     letter-spacing: 0.1em;
 }
-button:focus {
-    background-color: cadetblue;
+button:hover {
+
     box-shadow: 0 0 0 3px blue;
-    color: red;
+    color: darkblue;
 }

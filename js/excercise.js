@@ -5,16 +5,43 @@ const btnEnd = document.querySelector('.end');
 const btnCheck = document.querySelector('.check');
 const scoreDiv = document.querySelector('.score');
 const score = document.querySelector('.keyExc');
-const btnAnswers = document.querySelectorAll('.btnAns');
+const btnAnswers = document.querySelectorAll("input[name]");
 const numberOfKeys = document.querySelector('.keySetter')
 
 
 
+
 //zwraca ilość znaków z checkboxa listowego
-function setKeysNumber() {
-    const keyNumber = document.getElementById('keySignature').selectedIndex;
-    return document.getElementsByTagName('option')[keyNumber].value;
+function numOfKeys() {
+    const num = prompt('Wybierz ilość znaków przykluczowych (od 0 do 7)')
+    return num
+
 };
+
+function numOfKeysDisabler() {
+
+    switch (numOfKeys()) {
+        case '7':
+        case '6':
+            document.querySelector('input#Cis-ais').disabled=true;
+            document.querySelector('input#Ces-as').disabled=true;
+
+        case '5':
+            document.querySelector('input#Cis-ais').disabled=true;
+            document.querySelector('input#Ces-as').disabled=true;
+            document.querySelector('input#Fis-dis').disabled=true;
+            document.querySelector('input#Ges-es').disabled=true;
+        case '4':
+            document.querySelector('input#Cis-ais').disabled=true;
+            document.querySelector('input#Ces-as').disabled=true;
+            document.querySelector('input#Fis-dis').disabled=true;
+            document.querySelector('input#Ges-es').disabled=true;
+            document.querySelector('input#H-gis').disabled=true;
+            document.querySelector('input#Des-b').disabled=true;
+}
+}
+
+numOfKeysDisabler()
 
 //start
 function excerciseStart() {
@@ -59,10 +86,17 @@ function badCounter() {
 let odp = "";
 btnAnswers.forEach((button)=> {
     button.addEventListener('click', function onclick(event) {
-        odp = button.dataset.key;})})
-const checkAnswer = function() {
+        odp = button;})})
 
-        if (score.getAttribute('key') === odp) {
+const ansUnchecker = function() {
+    btnAnswers.forEach((button)=> {
+        button.checked=false
+})};
+
+const checkAnswer = function(event) {
+
+
+        if (score.getAttribute('key') === odp.id) {
             console.log('1')
             goodCounter();
             alert('Dobra odpowiedź');
@@ -70,7 +104,8 @@ const checkAnswer = function() {
             badCounter();
             alert('Błędna odpowiedź');
         }
-
+    event.preventDefault()
+    ansUnchecker()
     excerciseStart();
 };
 
@@ -88,5 +123,9 @@ const end = function() {
     badAnswerCounter.innerText = `${badAnswer}`;
 }
 
+
 btnEnd.addEventListener('click', end)
 document.addEventListener('DOMContentLoaded', excerciseStart)
+
+
+document.querySelector('.keySetter').value

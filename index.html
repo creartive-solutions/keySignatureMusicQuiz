@@ -48,13 +48,15 @@
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
         </select>
     </form>
-    <div class="answersForm">
+    <div  class="answersForm">
 
-        // TODO 'Change in js file data-key check for values check//
+<!--        // TODO 'Change in js file data-key check for values check//-->
 
-        <form>
+        <form id="keyCheckerAns">
             <input type="radio" name="keySing" id="C-a"  value="C-a"  data-signature="0"> <label for="C-a">C-dur <br> a-moll</label>
             <input type="radio" name="keySing" id="F-d" value="F-d" data-signature="1"> <label for="F-d"> F-dur <br>d-moll</label>
             <input type="radio" name="keySing" id="G-e" value="G-e" data-signature="1">  <label for="G-e">G-dur <br>e-moll</label>
@@ -72,20 +74,7 @@
             <input type="radio" name="keySing" id="Cis-ais" value="Cis-ais" data-signature="7">  <label for="Cis-ais">Cis-dur <br>ais-moll</label>
         </form>
     </div>
-    <section class="answers">
-        <button class="btnAns keyZero" data-signature="0" data-key="C-a" >C-dur <br> a-moll</button>
-        <button class="btnAns keyOneOne" data-signature="1" data-key="F-d" >F-dur <br> d-moll</button>
-        <button class="btnAns keyOne" data-signature="1" data-key="G-e" >G-dur <br> e-moll</button>
-        <button class="btnAns keyTwo" data-signature="2" data-key="B-g" >B-dur <br> g-moll</button>
-        <button class="btnAns keyTwo" data-signature="2" data-key="D-h" >D-dur <br> h-moll</button>
-        <button class="btnAns keyThree" data-signature="3" data-key="Es-c" >Es-dur <br> c-moll</button>
-        <button class="btnAns keyThree" data-signature="3" data-key="A-fis" >A-dur <br> fis-moll</button>
-        <button class="btnAns keyFour" data-signature="4" data-key="As-f" >As-dur <br> f-moll</button>
-        <button class="btnAns keyFour" data-signature="4" data-key="E-cis" >E-dur <br> cis-moll</button>
-        <button class="btnAns keyFive" data-signature="5" data-key="Des-b" >Des-dur <br> b-moll</button>
-        <button class="btnAns keyFive" data-signature="5" data-key="H-gis" >H-dur <br> gis-moll</button>
-    </section>
-    <button class="check">SPRAWDŹ!</button>
+    <button class="check" form="keyCheckerAns" type="submit">SPRAWDŹ!</button>
 </main>
 <footer>
     <section>

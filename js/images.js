@@ -117,8 +117,10 @@ const imageSevenFlat = {
     key: 'H-gis',
 }
 
-const gallery = [imageZeroKey, imageOneflat, imageOneSharp, imageTwoFlat, imageTwoFlat, imageThreeFlat, imageThreeSharp, imageFourFlat, imageFourSharp, imageFiveFlat, imageFiveSharp]
+const gallery = [imageZeroKey, imageOneflat, imageOneSharp, imageTwoFlat, imageTwoFlat, imageThreeFlat, imageThreeSharp, imageFourFlat, imageFourSharp, imageFiveFlat, imageFiveSharp, imageSixFlat, imageSixSharp, imageSevenSharp, imageSevenFlat]
 
 function randomImage(items) {
     return items[Math.floor(Math.random()*items.length)]
 }
+
+console.log(gallery)

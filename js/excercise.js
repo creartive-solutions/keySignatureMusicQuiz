@@ -72,6 +72,7 @@ function numOfKeysDisabler() {
         case '6':
             document.querySelector('input#Cis-ais').setAttribute('type', 'hidden')
             document.querySelector('input#Ces-as').setAttribute('type', 'hidden')
+            gallery.splice(13)
             break;
 
         case '5':
@@ -79,6 +80,7 @@ function numOfKeysDisabler() {
             document.querySelector('input#Ces-as').setAttribute('type', 'hidden')
             document.querySelector('input#Fis-dis').setAttribute('type', 'hidden')
             document.querySelector('input#Ges-es').setAttribute('type', 'hidden')
+            gallery.splice(11)
             break;
         case '4':
             document.querySelector('input#Cis-ais').setAttribute('type', 'hidden')
@@ -87,6 +89,7 @@ function numOfKeysDisabler() {
             document.querySelector('input#Ges-es').setAttribute('type', 'hidden')
             document.querySelector('input#H-gis').setAttribute('type', 'hidden')
             document.querySelector('input#Des-b').setAttribute('type', 'hidden')
+            gallery.splice(9)
             break;
         case '3':
             document.querySelector('input#Cis-ais').setAttribute('type', 'hidden')
@@ -97,6 +100,7 @@ function numOfKeysDisabler() {
             document.querySelector('input#Des-b').setAttribute('type', 'hidden')
             document.querySelector('input#E-cis').setAttribute('type', 'hidden')
             document.querySelector('input#As-f').setAttribute('type', 'hidden')
+            gallery.splice(7)
             break;
         case '2':
             document.querySelector('input#Cis-ais').setAttribute('type', 'hidden')
@@ -109,6 +113,7 @@ function numOfKeysDisabler() {
             document.querySelector('input#As-f').setAttribute('type', 'hidden')
             document.querySelector('input#A-fis').setAttribute('type', 'hidden')
             document.querySelector('input#Es-c').setAttribute('type', 'hidden')
+            gallery.splice(5)
             break;
         case '1':
             document.querySelector('input#Cis-ais').setAttribute('type', 'hidden')
@@ -123,6 +128,7 @@ function numOfKeysDisabler() {
             document.querySelector('input#Es-c').setAttribute('type', 'hidden')
             document.querySelector('input#D-h').setAttribute('type', 'hidden')
             document.querySelector('input#B-g').setAttribute('type', 'hidden')
+            gallery.splice(3)
             break;
         case '0':
             document.querySelector('input#Cis-ais').setAttribute('type', 'hidden')
@@ -139,6 +145,7 @@ function numOfKeysDisabler() {
             document.querySelector('input#B-g').setAttribute('type', 'hidden')
             document.querySelector('input#F-d').setAttribute('type', 'hidden')
             document.querySelector('input#G-e').setAttribute('type', 'hidden')
+            gallery.splice(1)
             break;
 }
 

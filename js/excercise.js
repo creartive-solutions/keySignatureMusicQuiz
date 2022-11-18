@@ -249,23 +249,20 @@ const end = function() {
 }
 
 
-const startSet = function () {
-    if(numberOfKeys.value === '' ) {
-        numberOfKeys.value = '7'
-        localStorage.setItem('keyNum', numberOfKeys.value)
-    } else {
-        numberOfKeys.value = localStorage.getItem('keyNum')
-    }
-
-    if(clefSelector.value === '' ) {
-        clefSelector.value = 'grand';
-        localStorage.setItem('clefSet', 'grand')
-    } else {
-        clefSelector.value = localStorage.getItem('clefSet')
-    }
-
-
-}
+// const startSet = function () {
+//     if(numberOfKeys.value === '' ) {
+//         numberOfKeys.value = '7'
+//         localStorage.setItem('keyNum', numberOfKeys.value)
+//     } else {
+//         numberOfKeys.value = localStorage.getItem('keyNum')
+//     }
+//
+//     if(clefSelector.value === '' ) {
+//         clefSelector.value = 'grand';
+//         localStorage.setItem('clefSet', 'grand')
+//     } else {
+//         clefSelector.value = localStorage.getItem('clefSet')
+//     }}
 btnEnd.addEventListener('click', end)
-document.addEventListener('DOMContentLoaded', startSet)
+// document.addEventListener('DOMContentLoaded', startSet)
 document.addEventListener('DOMContentLoaded', exerciseStart)

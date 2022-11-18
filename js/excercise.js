@@ -18,12 +18,12 @@ const clefSelector = document.querySelector('.clefSetter')
 
 
 //filtrowanie buttonów odpowiedzi (po ilości znaków)
-if(numberOfKeys.value === '' ) {
-    numberOfKeys.value === '7'
-    localStorage.setItem('keyNum', numberOfKeys.value)
-} else {
-    numberOfKeys.value = localStorage.getItem('keyNum')
-}
+// if(numberOfKeys.value === '' ) {
+//     numberOfKeys.value === '7'
+//     localStorage.setItem('keyNum', numberOfKeys.value)
+// } else {
+//     numberOfKeys.value = localStorage.getItem('keyNum')
+// }
 
 
 function numOfKeys() {
@@ -36,11 +36,12 @@ function numOfKeys() {
 
 
 //Filtrowanie kluczy
-if(clefSelector.value === '' ) {
-    clefSelector.value === 'grand'
-} else {
-    clefSelector.value = localStorage.getItem('clefSet')
-}
+// if(clefSelector.value === '' ) {
+//     clefSelector.value === 'grand'
+// } else {
+//     clefSelector.value = localStorage.getItem('clefSet')
+// }
+
 
 clefSelector.onchange = function () {
 
@@ -57,6 +58,7 @@ const submitSettings = function() {
     document.querySelector('.setSignatures').submit();
     document.querySelector('.setClefs').submit();
     numOfKeysDisabler()
+    exerciseStart()
     // end()
 
 }
@@ -234,13 +236,31 @@ const end = function() {
     badAnswerCounter.innerText = `${badAnswer}`;
     localStorage.clear('badStats');
     localStorage.clear('goodStats');
-    // exerciseStart()
+    exerciseStart()
 
 }
 
 
+const startSet = function () {
+    if(numberOfKeys.value === '' ) {
+        numberOfKeys.value === '7'
+        localStorage.setItem('keyNum', numberOfKeys.value)
+    } else {
+        numberOfKeys.value = localStorage.getItem('keyNum')
+    }
 
+    if(clefSelector.value === '' ) {
+        clefSelector.value === 'grand'
+        localStorage.setItem('clefSet', clefSelector.value)
+        clefSelector.setAttribute('selected')
+    } else {
+        clefSelector.value = localStorage.getItem('clefSet')
+    }
+
+
+}
 btnEnd.addEventListener('click', end)
+document.addEventListener('DOMContentLoaded', startSet)
 document.addEventListener('DOMContentLoaded', exerciseStart)
 
 

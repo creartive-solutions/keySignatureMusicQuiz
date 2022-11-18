@@ -43,8 +43,7 @@ function numOfKeys() {
 // }
 
 
-clefSelector.onchange = function () {
-
+function clefChangerer () {
     let modifyClef = clefSelector.value;
     localStorage.setItem('clefSet', modifyClef)
     return modifyClef
@@ -58,7 +57,8 @@ const submitSettings = function() {
     document.querySelector('.setSignatures').submit();
     document.querySelector('.setClefs').submit();
     numOfKeysDisabler()
-    exerciseStart()
+
+
     // end()
 
 }
@@ -150,7 +150,8 @@ numOfKeysDisabler()
 function exerciseStart() {
     btnStart.disabled=true;
     const imageNow = randomImage(gallery)
-    score.setAttribute('key', imageNow.key);
+
+    // clefSelector.value = localStorage.getItem('clefSet')
         switch (clefSelector.value) {
             case "treble":
                 score.setAttribute('src', imageNow.srcTreble);
@@ -162,7 +163,7 @@ function exerciseStart() {
                 score.setAttribute('src', imageNow.srcGrand);
                 break
         }
-
+    score.setAttribute('key', imageNow.key);
 }
 
 btnStart.addEventListener('click', exerciseStart);
@@ -243,16 +244,15 @@ const end = function() {
 
 const startSet = function () {
     if(numberOfKeys.value === '' ) {
-        numberOfKeys.value === '7'
+        numberOfKeys.value = '7'
         localStorage.setItem('keyNum', numberOfKeys.value)
     } else {
         numberOfKeys.value = localStorage.getItem('keyNum')
     }
 
     if(clefSelector.value === '' ) {
-        clefSelector.value === 'grand'
-        localStorage.setItem('clefSet', clefSelector.value)
-        clefSelector.setAttribute('selected')
+        clefSelector.value = 'grand';
+        localStorage.setItem('clefSet', 'grand')
     } else {
         clefSelector.value = localStorage.getItem('clefSet')
     }
@@ -262,6 +262,3 @@ const startSet = function () {
 btnEnd.addEventListener('click', end)
 document.addEventListener('DOMContentLoaded', startSet)
 document.addEventListener('DOMContentLoaded', exerciseStart)
-
-
-document.querySelector('.keySetter').value

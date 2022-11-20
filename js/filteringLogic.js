@@ -1,7 +1,7 @@
 const numberOfKeys = document.querySelector('.keySetter');
 const clefSelector = document.querySelector('.clefSetter');
 const submit = document.querySelector('.submitter');
-
+const btnCheck = document.querySelector('.check');
 //ładowanie ustawień zapisanych w localStorage
 function numOfKeysOnDomLoad() {
     const keyNumber = localStorage.getItem('keyNum');
@@ -18,10 +18,15 @@ function clefsOnDomLoad() {
     }
     return clefNumber;
 }
+
+
+
+
 function loadDomSettings() {
     counterReset()
     numOfKeysOnDomLoad()
     clefsOnDomLoad()
+    btnCheck.disabled = true;
 }
 
 loadDomSettings()

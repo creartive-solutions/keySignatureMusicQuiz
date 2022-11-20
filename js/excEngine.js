@@ -1,12 +1,16 @@
 const btnStart = document.querySelector('.start');
 const btnEnd = document.querySelector('.end');
-const btnCheck = document.querySelector('.check');
 const score = document.querySelector('.keyExc');
 const btnAnswers = document.querySelectorAll('input[name]');
 
-
+function buttonActiver() {
+    btnAnswers.forEach((button) => {
+        button.disabled=false
+    });
+}
 function newExerciseStart() {
     btnStart.disabled = true;
+   btnCheck.disabled = false;
     const imageNow = randomImage(gallery);
 
 

@@ -19,6 +19,8 @@ function clefsOnDomLoad() {
     return clefNumber;
 }
 function loadDomSettings() {
+    localStorage.removeItem('badStats');
+    localStorage.removeItem('goodStats');
     numOfKeysOnDomLoad()
     clefsOnDomLoad()
 }

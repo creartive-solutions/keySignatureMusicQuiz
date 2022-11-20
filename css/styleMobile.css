@@ -23,7 +23,7 @@ header {
 .titleWww {
    margin: 2vh auto;
     width: 80vw;
-    font-family: 'Baloo 2';
+    font-family: 'Baloo 2', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 3vh;
@@ -261,4 +261,13 @@ button:hover {
     border: 2px black solid;
     border-radius: 30px;
 max-width: 600px;
+}
+
+.h2Settings {
+    text-transform: uppercase;
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+
 }

@@ -36,7 +36,7 @@
 <main class="excercise">
     <div class="startStop"><button class="start">START</button> <button class="end">KONIEC</button></div>
     <div class="score">
-        <img class="keyExc" src="" alt="">
+        <img class="keyExc" src='' alt="">
     </div>
     <span class="ans ansTon">co to za tonacja?</span>
 
@@ -58,12 +58,13 @@
             <input type="radio" name="keySing" id="Ces-as" value="Ces-as" data-signature="7">  <label for="Ces-as">Ces-dur <br>as-moll</label>
             <input type="radio" name="keySing" id="Cis-ais" value="Cis-ais" data-signature="7">  <label for="Cis-ais">Cis-dur <br>ais-moll</label>
         </form>
-    <button class="check" form="keyCheckerAns" type="submit">SPRAWDŹ!</button>
+    <button class="check" form="keyCheckerAns" type="button">SPRAWDŹ!</button>
     </div>
 </main>
     <div class="settings">
-        <h2>ustawienia <i class="fa-solid fa-sliders"></i></h2>
-        <form class="setSignatures">
+        <h2 class="h2Settings">ustawienia <i class="fa-solid fa-sliders"></i></h2>
+        <em class="settingsDescription">Uwaga! Zapisanie ustawień spowoduje zakończenie ćwiczenia!</em>
+        <section class="setSignatures">
             <label>Wybierz ilość znaków:</label>
             <select name="keyNumber" id="keySignature" class="keySetter">
                 <option value="0">0</option>
@@ -73,18 +74,18 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
-                <option selected="selected" value="7">7</option>
+                <option value="7">7</option>
             </select>
-        </form>
+        </section>
         <form class="setClefs">
             <label>Wybierz klucz do rozpoznawania tonacji:</label>
             <select name="clef" id="clef" class="clefSetter">
                 <option value="treble"><span class="clef">𝄞</span> - klucz wiolinowy</option>
                 <option value="bass"><span class="clef">𝄢</span> - klucz basowy</option>
-                <option selected="selected" value="grand"><span class="clef">𝄞+𝄢</span> - klucz wiolinowy + basowy</option>
+                <option value="grand"><span class="clef">𝄞+𝄢</span> - klucz wiolinowy + basowy</option>
             </select>
         </form>
-        <input type="button" onclick="submitSettings()" value="Zapisz ustawienia!">
+        <input class="submitter"  type="button" value="Zapisz ustawienia!">
     </div>
 <footer>
     <section>
@@ -99,6 +100,10 @@
 
 </div>
 <script src="js/images.js"></script>
-<script src="js/excercise.js"></script>
+<script src="js/counter.js"></script>
+<script src="js/filteringLogic.js"></script>
+<script src="js/excEngine.js"></script>
+
+
 </body>
 </html>

@@ -31,6 +31,8 @@ function loadDomSettings() {
     clefsOnDomLoad()
     btnCheck.disabled = true;
     btnEnd.disabled = true;
+    formSavedSettings('keySignature', localStorage.getItem('keyNum'))
+    formSavedSettings('clef', localStorage.getItem('clefSet'))
 }
 
 loadDomSettings()
@@ -44,15 +46,24 @@ function counterReset() {
     localStorage.removeItem('goodStats');
 }
 //Zczytanie l. znakow do zapisu ustawień
+
+function formSavedSettings(id, value) {
+        let element = document.getElementById(id);
+        element.value = value;
+    }
+
+
 function setNumOfKeys() {
-    const keySignatureSetter = numberOfKeys.value
-    localStorage.setItem('keyNum', keySignatureSetter)
+    const keySignatureSetter = numberOfKeys.value;
+    localStorage.setItem('keyNum', keySignatureSetter);
+    formSavedSettings('keySignature', localStorage.getItem('keyNum'));
     return keySignatureSetter
 }
 function setClef() {
-    const clefSetter = clefSelector.value
-    localStorage.setItem('clefSet', clefSetter)
-    return clefSetter
+    const clefSeter = clefSelector.value;
+    localStorage.setItem('clefSet', clefSeter);
+    formSavedSettings('clef', localStorage.getItem('clefSet'));
+    return clefSeter
 }
 
 function numOfKeysDisabler() {
@@ -147,6 +158,7 @@ function submitSettings() {
     numOfKeysDisabler()
     setClef()
     location.reload()
+
 
 }
 

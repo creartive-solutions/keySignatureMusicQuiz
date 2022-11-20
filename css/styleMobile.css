@@ -23,6 +23,8 @@ header {
 .titleWww {
    margin: 2vh auto;
     width: 80vw;
+    max-width: 1100px;
+    text-align: center;
     font-family: 'Baloo 2', sans-serif;
     font-style: normal;
     font-weight: 700;

@@ -31,8 +31,8 @@ function loadDomSettings() {
     clefsOnDomLoad()
     btnCheck.disabled = true;
     btnEnd.disabled = true;
-    formSavedSettings('keySignature', localStorage.getItem('keyNum'))
-    formSavedSettings('clef', localStorage.getItem('clefSet'))
+    formSavedSettingsSetter('keySignature', localStorage.getItem('keyNum'))
+    formSavedSettingsSetter('clef', localStorage.getItem('clefSet'))
 }
 
 loadDomSettings()
@@ -45,9 +45,9 @@ function counterReset() {
     localStorage.removeItem('badStats');
     localStorage.removeItem('goodStats');
 }
-//Zczytanie l. znakow do zapisu ustawień
 
-function formSavedSettings(id, value) {
+
+function formSavedSettingsSetter(id, value) {
         let element = document.getElementById(id);
         element.value = value;
     }
@@ -56,13 +56,13 @@ function formSavedSettings(id, value) {
 function setNumOfKeys() {
     const keySignatureSetter = numberOfKeys.value;
     localStorage.setItem('keyNum', keySignatureSetter);
-    formSavedSettings('keySignature', localStorage.getItem('keyNum'));
+    formSavedSettingsSetter('keySignature', localStorage.getItem('keyNum'));
     return keySignatureSetter
 }
 function setClef() {
     const clefSeter = clefSelector.value;
     localStorage.setItem('clefSet', clefSeter);
-    formSavedSettings('clef', localStorage.getItem('clefSet'));
+    formSavedSettingsSetter('clef', localStorage.getItem('clefSet'));
     return clefSeter
 }
 

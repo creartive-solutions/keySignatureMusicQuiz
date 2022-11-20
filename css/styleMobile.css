@@ -253,7 +253,7 @@ button:hover {
 .check:hover {
 
     box-shadow: 0 0 0 2px darkslategray;
-    color: darkslategray;
+
 }
 
 .settings {
@@ -282,4 +282,15 @@ input:checked + label + .goodAns {
 .badAns {
     background-color: #FF3737;
     
+}
+
+button:disabled {
+    background-color: grey;
+    cursor: auto;
+    color: dimgrey;
+}
+
+button:disabled:hover {
+    box-shadow: none;
+
 }

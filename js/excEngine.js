@@ -1,16 +1,12 @@
 const btnStart = document.querySelector('.start');
-const btnEnd = document.querySelector('.end');
+
 const score = document.querySelector('.keyExc');
 const btnAnswers = document.querySelectorAll('input[name]');
 
-function buttonActiver() {
-    btnAnswers.forEach((button) => {
-        button.disabled=false
-    });
-}
 function newExerciseStart() {
     btnStart.disabled = true;
    btnCheck.disabled = false;
+   btnEnd.disabled = false
     const imageNow = randomImage(gallery);
 
 
@@ -75,7 +71,10 @@ const end = function () {
   const percent = goodAnswer / (goodAnswer + badAnswer) * 100;
   alert(`Wynik to: ${goodAnswer} dobrych odpowiedzi. Twoja Skuteczność to ${percent.toFixed(0)}%`);
   btnStart.disabled = false;
+    btnEnd.disabled = true;
+    btnCheck.disabled = true;
   score.setAttribute('src', '');
   counterReset()
+
 };
 btnEnd.addEventListener('click', end);

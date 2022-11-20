@@ -61,11 +61,6 @@ const end = function () {
   alert(`Wynik to: ${goodAnswer} dobrych odpowiedzi. Twoja Skuteczność to ${percent.toFixed(0)}%`);
   btnStart.disabled = false;
   score.setAttribute('src', '');
-  goodAnswer = 0;
-  goodAnswerCounter.innerText = `${goodAnswer}`;
-  badAnswer = 0;
-  badAnswerCounter.innerText = `${badAnswer}`;
-  localStorage.removeItem('badStats');
-  localStorage.removeItem('goodStats');
+  counterReset()
 };
 btnEnd.addEventListener('click', end);

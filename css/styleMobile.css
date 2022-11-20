@@ -216,9 +216,6 @@ button.end {
 
 }
 
-input:disabled + label {
-    background-color: rgba(0, 0, 0, 0.4);
-}
 
 input[type=hidden] + label {
     display: none;
@@ -278,7 +275,7 @@ max-width: 600px;
 }
 
 
-.goodAns {
+input:checked + label + .goodAns {
     background-color: #60DB34;
 }
 

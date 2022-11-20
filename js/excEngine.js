@@ -47,7 +47,7 @@ const checkAnswer = function (event) {
         alert('Dobra odpowiedź'); // dodac zmianę kolorów
     } else {
         badCounter();
-        alert('Błędna odpowiedź');
+        alert(`Błędna odpowiedź.\n\r Prawidłowa odpowiedź to ${score.getAttribute('odp')}`);
     }
     ansUnchecker();
     newExerciseStart();

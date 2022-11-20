@@ -1,6 +1,6 @@
 # keySignatureMusicQuiz
 
-I want to invite you to use my music app for consolidating knowlege of key signatures.
+I want to invite you to check my first music app for consolidating knowlege of key signatures.
 
 
 CHECK IT :) 

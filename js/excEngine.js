@@ -23,6 +23,7 @@ function newExerciseStart() {
 
 
     score.setAttribute('key', imageNow.key);
+    score.setAttribute('odp', imageNow.odp);
 }
 btnStart.addEventListener('click', newExerciseStart);
 

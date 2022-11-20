@@ -19,14 +19,21 @@ function clefsOnDomLoad() {
     return clefNumber;
 }
 function loadDomSettings() {
-    localStorage.removeItem('badStats');
-    localStorage.removeItem('goodStats');
+    counterReset()
     numOfKeysOnDomLoad()
     clefsOnDomLoad()
 }
 
 loadDomSettings()
 
+function counterReset() {
+    goodAnswer = 0;
+    goodAnswerCounter.innerText = `${goodAnswer}`;
+    badAnswer = 0;
+    badAnswerCounter.innerText = `${badAnswer}`;
+    localStorage.removeItem('badStats');
+    localStorage.removeItem('goodStats');
+}
 //Zczytanie l. znakow do zapisu ustawień
 function setNumOfKeys() {
     const keySignatureSetter = numberOfKeys.value

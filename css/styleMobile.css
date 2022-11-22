@@ -296,3 +296,7 @@ button:disabled:hover {
     box-shadow: none;
 
 }
+iframe {
+    display: block;
+    margin: auto;
+}

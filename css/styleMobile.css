@@ -298,5 +298,6 @@ button:disabled:hover {
 }
 iframe {
     display: block;
-    margin: auto;
+    margin: 20px auto;
+    width: 30%;
 }

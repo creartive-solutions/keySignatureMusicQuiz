@@ -277,11 +277,15 @@ max-width: 600px;
 }
 
 
-input:checked + label + .goodAns {
+input:checked.goodAns + label  {
     background-color: #60DB34;
 }
 
-.badAns {
+input.goodBadAns + label  {
+    background-color: #60DB34;
+}
+
+input:checked.badAns + label {
     background-color: #FF3737;
     
 }

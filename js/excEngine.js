@@ -39,27 +39,45 @@ btnAnswers.forEach((button) => {
 const ansUnchecker = function () {
     btnAnswers.forEach((button) => {
         button.checked = false;
-        button.classList.remove('.goodAns')
-        button.classList.remove('.badAns')
+        button.classList.remove('goodAns')
+        button.classList.remove('badAns')
+        button.classList.remove('goodBadAns')
     });
 };
 
 function colorGoodAnswers() {
-    odp.classList.add('.goodAns')
+    odp.classList.add('goodAns')
+}
+function colorBadAnswers() {
+    odp.classList.add('badAns')
 }
 
+function colorGoodBad() {
+    document.getElementById(score.attributes.key.value).classList.add('goodBadAns')
+}
+
+
+// fukcja jeśli dobrze
 const checkAnswer = function (event) {
     if (score.getAttribute('key') === odp.id) {
-        goodCounter();
-        alert('Dobra odpowiedź. Tak trzymaj!')
+        goodCounter()
+        colorGoodAnswers()
+        // alert('Dobra odpowiedź. Tak trzymaj!')
+
 
     } else {
         badCounter();
-        alert(`Błędna odpowiedź.\n\rPrawidłowa odpowiedź to ${score.getAttribute('odp')}`);
+        colorBadAnswers()
+        colorGoodBad()
+        // alert(`Błędna odpowiedź.\n\rPrawidłowa odpowiedź to ${score.getAttribute('odp')}`);
+
     }
 
-    ansUnchecker();
-    newExerciseStart();
+    setTimeout(() => {
+        ansUnchecker();
+        newExerciseStart();
+    }, 4000)
+
 
 
 };

@@ -62,7 +62,7 @@ const checkAnswer = function (event) {
     if (score.getAttribute('key') === odp.id) {
         goodCounter()
         colorGoodAnswers()
-        // alert('Dobra odpowiedź. Tak trzymaj!')
+        // alert('Dobra odpowiedź. Tak trzymajd!')
 
 
     } else {

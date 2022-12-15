@@ -68,7 +68,7 @@ function colorGood() {
 const checkAnswer = function (event) {
     btnDisabler()
     colorGood()
-    btnCheck.disabled = false;
+    btnCheck.disabled = true;
 
 
     if (score.getAttribute('key') === odp.id) {

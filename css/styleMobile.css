@@ -277,7 +277,7 @@ max-width: 600px;
 }
 
 
-input:checked.goodAns + label  {
+input:checked.goodBadAns + label  {
     background-color: #60DB34;
 }
 

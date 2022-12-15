@@ -42,33 +42,42 @@ const ansUnchecker = function () {
         button.classList.remove('goodAns')
         button.classList.remove('badAns')
         button.classList.remove('goodBadAns')
+        button.removeAttribute('disabled')
     });
 };
 
-function colorGoodAnswers() {
-    odp.classList.add('goodAns')
-}
+const btnDisabler = function () {
+    btnAnswers.forEach((button) => {
+        button.setAttribute('disabled', true)
+
+    });
+};
+
+
 function colorBadAnswers() {
     odp.classList.add('badAns')
 }
 
-function colorGoodBad() {
+function colorGood() {
     document.getElementById(score.attributes.key.value).classList.add('goodBadAns')
 }
 
 
 // fukcja jeśli dobrze
 const checkAnswer = function (event) {
+    colorGood()
+    btnCheck.disabled = false;
+    btnDisabler()
+
     if (score.getAttribute('key') === odp.id) {
         goodCounter()
-        colorGoodAnswers()
         // alert('Dobra odpowiedź. Tak trzymajd!')
 
 
     } else {
         badCounter();
         colorBadAnswers()
-        colorGoodBad()
+
         // alert(`Błędna odpowiedź.\n\rPrawidłowa odpowiedź to ${score.getAttribute('odp')}`);
 
     }

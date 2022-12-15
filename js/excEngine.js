@@ -42,6 +42,7 @@ const ansUnchecker = function () {
         button.classList.remove('goodAns')
         button.classList.remove('badAns')
         button.classList.remove('goodBadAns')
+        // button.classList.remove('btnDisabled')
         button.removeAttribute('disabled')
     });
 };
@@ -49,7 +50,7 @@ const ansUnchecker = function () {
 const btnDisabler = function () {
     btnAnswers.forEach((button) => {
         button.setAttribute('disabled', true)
-
+        // button.classList.add('btnDisabled')
     });
 };
 
@@ -65,9 +66,10 @@ function colorGood() {
 
 // fukcja jeśli dobrze
 const checkAnswer = function (event) {
+    btnDisabler()
     colorGood()
     btnCheck.disabled = false;
-    btnDisabler()
+
 
     if (score.getAttribute('key') === odp.id) {
         goodCounter()
@@ -85,7 +87,7 @@ const checkAnswer = function (event) {
     setTimeout(() => {
         ansUnchecker();
         newExerciseStart();
-    }, 4000)
+    }, 3000)
 
 
 
